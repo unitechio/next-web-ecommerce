@@ -1,0 +1,26 @@
+{
+  "HomePage": {
+    "title": "Welcome to Our Blog",
+    "description": "Discover stories, thinking, and expertise from writers on any topic."
+  },
+  "Navigation": {
+    "home": "Home",
+    "blogs": "Blogs",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
+  },
+  "Common": {
+    "readMore": "Read More",
+    "searchPlaceholder": "Search blogs...",
+    "comments": "Comments",
+    "submitComment": "Submit",
+    "back": "Back",
+    "relatedBlogs": "Related Blogs"
+  }
+}

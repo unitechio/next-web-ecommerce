@@ -1,0 +1,25 @@
+{
+  "HomePage": {
+    "title": "Chào mừng đến với Blog của chúng tôi",
+    "description": "Khám phá những câu chuyện, suy nghĩ và chuyên môn từ các tác giả về mọi chủ đề."
+  },
+  "Navigation": {
+    "home": "Trang chủ",
+    "blogs": "Bài viết",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "logout": "Đăng xuất"
+  },
+  "Footer": {
+    "rights": "Đã đăng ký bản quyền."
+  },
+  "Common": {
+    "readMore": "Đọc thêm",
+    "searchPlaceholder": "Tìm kiếm bài viết...",
+    "comments": "Bình luận",
+    "submitComment": "Gửi",
+    "relatedBlogs": "Bài viết liên quan"
+  }
+}
