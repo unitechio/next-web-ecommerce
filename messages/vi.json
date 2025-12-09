@@ -1,7 +1,121 @@
 {
   "HomePage": {
-    "title": "Chào mừng đến với Blog của chúng tôi",
-    "description": "Khám phá những câu chuyện, suy nghĩ và chuyên môn từ các tác giả về mọi chủ đề."
+    "hero": {
+      "badge": "Nền tảng công nghệ hàng đầu 2025",
+      "title": {
+        "before": "Giải pháp công nghệ",
+        "highlight": "toàn diện",
+        "after": "cho doanh nghiệp"
+      },
+      "description": "Tối ưu hóa quy trình, tăng năng suất, và thúc đẩy tăng trưởng bền vững với công nghệ AI và cloud hiện đại."
+    },
+    "features": {
+      "title": "Tại sao chọn VietTech?",
+      "description": "Chúng tôi cung cấp giải pháp toàn diện với công nghệ tiên tiến nhất cho doanh nghiệp hiện đại.",
+      "items": [
+        {
+          "title": "Hiệu suất cao",
+          "desc": "Tối ưu hóa tốc độ với công nghệ cloud hiện đại, xử lý tức thời."
+        },
+        {
+          "title": "Bảo mật tuyệt đối",
+          "desc": "Mã hóa end-to-end, tuân thủ ISO 27001 và tiêu chuẩn quốc tế."
+        },
+        {
+          "title": "Tăng trưởng bền vững",
+          "desc": "Mở rộng quy mô dễ dàng theo nhu cầu của doanh nghiệp."
+        },
+        {
+          "title": "Hợp tác hiệu quả",
+          "desc": "Công cụ cộng tác nhóm mạnh mẽ, tăng năng suất 40%."
+        },
+        {
+          "title": "Đa nền tảng",
+          "desc": "Truy cập mọi lúc mọi nơi từ mọi thiết bị, hoàn toàn đồng bộ."
+        },
+        {
+          "title": "Giao diện tối ưu",
+          "desc": "Thiết kế hiện đại, UX tuyệt vời, dễ sử dụng cho mọi đối tượng."
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Khách hàng nói gì về chúng tôi?",
+      "description": "Hàng nghìn doanh nghiệp đã tin tưởng VietTech để tăng trưởng và phát triển bền vững.",
+      "items": [
+        {
+          "name": "Nguyễn Văn A",
+          "role": "CEO - TechCorp Vietnam",
+          "company": "Công ty Cổ phần Công nghệ",
+          "text": "VietTech CRM đã giúp team sales của chúng tôi tăng productivity 40% chỉ trong 2 tháng. Công cụ tuyệt vời!",
+          "rating": 5
+        },
+        {
+          "name": "Trần Thị B",
+          "role": "Sales Manager - E-commerce Plus",
+          "company": "E-commerce Plus",
+          "text": "Marketing Automation của VietTech tiết kiệm cho chúng tôi 5 tiếng làm việc mỗi ngày. ROI thực sự tuyệt vời!",
+          "rating": 5
+        },
+        {
+          "name": "Lê Văn C",
+          "role": "Director - Manufacturing Pro",
+          "company": "Manufacturing Pro",
+          "text": "ERP VietTech tích hợp tốt, dễ sử dụng. Quản lý inventory hiệu quả hơn 30% so với hệ thống cũ.",
+          "rating": 5
+        }
+      ]
+    },
+    "usecases": {
+      "title": "Áp dụng cho mọi ngành",
+      "description": "VietTech được sử dụng bởi các doanh nghiệp từ nhiều ngành khác nhau.",
+      "items": [
+        {
+          "icon": "🏢",
+          "name": "Bất động sản",
+          "description": "Quản lý dự án, khách hàng, hợp đồng"
+        },
+        {
+          "icon": "🏭",
+          "name": "Sản xuất",
+          "description": "Lên kế hoạch sản xuất, quản lý kho"
+        },
+        {
+          "icon": "🛍️",
+          "name": "Bán lẻ",
+          "description": "Quản lý kênh bán, inventory, khách hàng"
+        },
+        {
+          "icon": "🏥",
+          "name": "Y tế",
+          "description": "Quản lý bệnh nhân, lịch hẹn, tài chính"
+        },
+        {
+          "icon": "🎓",
+          "name": "Giáo dục",
+          "description": "Quản lý học sinh, điểm, học phí"
+        },
+        {
+          "icon": "🚚",
+          "name": "Logistics",
+          "description": "Vận chuyển, kho, theo dõi đơn hàng"
+        },
+        {
+          "icon": "💼",
+          "name": "Dịch vụ chuyên môn",
+          "description": "Tư vấn, dự án, billing"
+        },
+        {
+          "icon": "🏦",
+          "name": "Tài chính",
+          "description": "Kế toán, khoá sổ, báo cáo"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Sẵn sàng bắt đầu chuyển đổi số?",
+      "description": "Hàng nghìn doanh nghiệp đã tin tưởng VietTech để tăng trưởng bền vững. Hãy trở thành một phần của cộng đồng ngày hôm nay."
+    }
   },
   "Navigation": {
     "home": "Trang chủ",
@@ -20,6 +134,29 @@
     "searchPlaceholder": "Tìm kiếm bài viết...",
     "comments": "Bình luận",
     "submitComment": "Gửi",
-    "relatedBlogs": "Bài viết liên quan"
+    "relatedBlogs": "Bài viết liên quan",
+    "start": "Bắt đầu miễn phí",
+    "watchDemo": "Xem demo",
+    "contact": "Liên hệ ngay",
+    "explore": "Khám phá sản phẩm"
+  },
+  "Error": {
+    "backHome": "Về trang chủ",
+    "404": {
+      "title": "404 - Trang không tìm thấy",
+      "description": "Rất tiếc, trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển."
+    },
+    "401": {
+      "title": "401 - Chưa đăng nhập",
+      "description": "Bạn cần đăng nhập để truy cập tài nguyên này."
+    },
+    "403": {
+      "title": "403 - Không có quyền",
+      "description": "Bạn không có quyền truy cập vào trang này."
+    },
+    "501": {
+      "title": "501 - Chưa triển khai",
+      "description": "Tính năng này đang được phát triển. Vui lòng quay lại sau."
+    }
   }
 }

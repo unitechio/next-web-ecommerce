@@ -10,7 +10,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import NextTopLoader from "nextjs-toploader";
 
-import "../globals.css";
+import "@/styles/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,9 +59,7 @@ export default async function LocaleLayout({
                   />
                   <Header />
                   <main className="grow pt-20 pb-12">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                      {children}
-                    </div>
+                    {children}
                   </main>
                   <Footer />
                 </ThemeProvider>

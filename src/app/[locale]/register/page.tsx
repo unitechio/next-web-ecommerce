@@ -1,36 +1,123 @@
-"use client";
+"use client"
 
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import type React from "react"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Separator } from "@/components/ui/separator"
+import Link from "next/link"
+import { useState } from "react"
+import { useAuth } from "@/contexts/auth-context"
+import { useRouter } from "next/navigation"
 
 export default function RegisterPage() {
-    const t = useTranslations('Navigation');
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [agreeToTerms, setAgreeToTerms] = useState(false)
+  const { register, isLoading } = useAuth()
+  const router = useRouter()
 
-    return (
-        <div className="flex items-center justify-center min-h-[80vh]">
-            <div className="w-full max-w-md p-8 bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-gray-100 dark:border-zinc-800">
-                <h1 className="text-3xl font-bold mb-6 text-center">{t('register')}</h1>
-                <form className="space-y-4">
-                    <div>
-                        <label className="block text-sm font-medium mb-1">Name</label>
-                        <input type="text" className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-zinc-700 bg-transparent focus:ring-2 focus:ring-blue-500 outline-none" />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-medium mb-1">Email</label>
-                        <input type="email" className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-zinc-700 bg-transparent focus:ring-2 focus:ring-blue-500 outline-none" />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-medium mb-1">Password</label>
-                        <input type="password" className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-zinc-700 bg-transparent focus:ring-2 focus:ring-blue-500 outline-none" />
-                    </div>
-                    <button type="submit" className="w-full py-2 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition-colors">
-                        {t('register')}
-                    </button>
-                </form>
-                <div className="mt-4 text-center text-sm">
-                    Already have an account? <Link href="/login" className="text-blue-600 hover:underline">{t('login')}</Link>
-                </div>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!agreeToTerms) {
+      alert("Vui lòng đồng ý với điều khoản dịch vụ")
+      return
+    }
+    await register(name, email, password)
+    router.push("/")
+  }
+
+  return (
+    <div className="container mx-auto px-4 py-12 md:py-20">
+      <div className="mx-auto max-w-md">
+        <Card>
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl">Đăng ký</CardTitle>
+            <CardDescription>Tạo tài khoản VietTech mới</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="name">Họ và tên</Label>
+                <Input
+                  id="name"
+                  placeholder="Nguyễn Văn A"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="example@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password">Mật khẩu</Label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                <p className="text-xs text-muted-foreground">Mật khẩu phải có ít nhất 8 ký tự</p>
+              </div>
+
+              <div className="flex items-center space-x-2">
+                <Checkbox
+                  id="terms"
+                  checked={agreeToTerms}
+                  onCheckedChange={(checked) => setAgreeToTerms(checked as boolean)}
+                />
+                <label
+                  htmlFor="terms"
+                  className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Tôi đồng ý với{" "}
+                  <Link href="/terms" className="text-accent hover:underline">
+                    điều khoản dịch vụ
+                  </Link>{" "}
+                  và{" "}
+                  <Link href="/privacy" className="text-accent hover:underline">
+                    chính sách bảo mật
+                  </Link>
+                </label>
+              </div>
+
+              <Button type="submit" className="w-full" size="lg" disabled={isLoading}>
+                {isLoading ? "Đang đăng ký..." : "Đăng ký"}
+              </Button>
+            </form>
+
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <Separator />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-background px-2 text-muted-foreground">Hoặc</span>
+              </div>
             </div>
-        </div>
-    );
+
+            <div className="text-center text-sm">
+              Đã có tài khoản?{" "}
+              <Link href="/login" className="text-accent font-medium hover:underline">
+                Đăng nhập ngay
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  )
 }
